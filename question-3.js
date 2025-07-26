@@ -1,13 +1,15 @@
 // Question #3
-let userPassword = "ssswnalWadqQ";
+let userPassword = "abcdefghijk";
 // เริ่มเขียนโค้ดตรงนี้
+let strongPassword = "aaaaaaaaaa";
+let mediumPassword = "aaaaaa"
 function checkPasswordStrength (userPassword) {
-    if (userPassword > "aaaaaaaaaa") {
+    if (userPassword.length > strongPassword.length) {
         return "Strong"
-    } else if (userPassword >= "aaaaaa" && userPassword <= "aaaaaaaaaa") {
+    } else if (userPassword.length >= mediumPassword.length && userPassword.length <= strongPassword.length) {
         return "Medium"
-    } else if (userPassword < "aaaaaa") {
-        return Weak
+    } else if (userPassword.length < mediumPassword.length) {
+        return "Weak"
     }
 }
 
